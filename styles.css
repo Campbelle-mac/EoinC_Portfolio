@@ -1,3 +1,11 @@
+.mainBody {
+  color: black;
+}
+
+.mainDiv {
+  color: blue;
+}
+
 .mainHeading {
   font-size: 30px;
 }
