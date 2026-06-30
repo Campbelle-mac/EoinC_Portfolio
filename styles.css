@@ -1,9 +1,30 @@
 .mainBody {
-  background-color: Black;
+	background-color: grey;
+}
+
+.mainBar {
+	display: flex;
+	width: 1250px;
+	height: 75px;
+	background-color: blue;
+	margin: auto;
+	transition: height 0.3s ease;
 }
 
 .mainDiv {
+<<<<<<< Updated upstream
   background-color: White;
+=======
+	display: flex;
+	width: 1250px;
+	height: 815px;
+	margin: auto;
+	background-color: White;
+}
+
+.mainDivElements {
+	display: block;
+>>>>>>> Stashed changes
 }
 
 .mainHeading {
