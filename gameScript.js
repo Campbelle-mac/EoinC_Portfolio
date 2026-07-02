@@ -3,24 +3,42 @@ console.log("JavaScript Working");
 const page = document.getElementById("gameBody");
 const cords = document.getElementById("cords");
 
-function eventHandle(event) {
-	cords.innerHTML = "X: " + event.offsetX + " Y: " + event.offsetY;
+let isDrawing = false;
+
+function drawBox() {
+	let X = event.offsetX;
+	let Y = event.offsetY;
+	const box = document.createElement("div");
+	let widthHeight = 25;
+	
+	box.className = "box";
+	box.style.pointerEvents = "none";
+	box.style.position = "absolute";
+	box.style.top = Y + 115 + (widthHeight / 2) + "px";
+	box.style.left = X + 75 + (widthHeight / 2) + "px";
+	box.style.width = widthHeight + "px";
+	box.style.height = widthHeight + "px";
+	box.style.backgroundColor = "black";
+	page.append(box);
 }
 
 function eventMouseD(event) {
-	const box = document.createElement("div");
-	let X = event.offsetX;
-	let Y = event.offsetY;
-	box.id = "box";
-	box.style.width = "100px";
-	box.style.height = "100px";
-	box.style.marginLeft = Y + "px";
-	//box.style.marginTop = X + "px";
-	box.style.backgroundColor = "black";
-	page.append(box);
-	
+	isDrawing = true;
+	drawBox();
+}
+
+function eventHandle(event) {
+	cords.innerHTML = "X: " + event.offsetX + " Y: " + event.offsetY;
+	if (isDrawing == true) {
+		drawBox()
+	}
+}
+
+function eventMouseU(event) {
+	isDrawing = false;
 }
 
 page.addEventListener("mousemove", eventHandle);
 page.addEventListener("mousedown", eventMouseD);
+window.addEventListener("mouseup", eventMouseU);
 
