@@ -22,11 +22,17 @@
 	background-color: White;
 }
 
-.gameHeader {
+.header {
+	display: inline-block;
 	width: 1250px;
 	height: 120px;
-	margin: auto;
+	
 	background-color: lightgrey;
+}
+
+.headerElements {
+	margin-top: -20px;
+	margin-left: 5px;
 }
 .mainDivElements {
 	display: block;

@@ -14,8 +14,8 @@ function drawBox() {
 	box.className = "box";
 	box.style.pointerEvents = "none";
 	box.style.position = "absolute";
-	box.style.top = Y + 115 + (widthHeight / 2) + "px";
-	box.style.left = X + 75 + (widthHeight / 2) + "px";
+	box.style.top = Y - 20 + (widthHeight / 2) + "px";
+	box.style.left = X + 84 + (widthHeight / 2) + "px";
 	box.style.width = widthHeight + "px";
 	box.style.height = widthHeight + "px";
 	box.style.backgroundColor = "black";
