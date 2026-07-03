@@ -9,14 +9,19 @@
 </head>
 <body class="mainBody">
 	<div id="gameHeader" class="header">
-			<div class="headerElements">
-				<h1>Project</h1>
-				<p id="cords">X: 0 Y: 0</p>
-				<h2 class="proSubheading"></h2>
-				<a href="projects.html" class="mainButton">View Portfolio</a>
-				<a href="index.html" class="proButton">Back to menu</a>
+		<div id"gameHeaderElements" class="headerElements">
+			<h1>Canvas</h1>
+			<p id="cords">X: 0 Y: 0</p>
+			<h2 class="proSubheading"></h2>
+			<a href="projects.html" class="mainButton">View Portfolio</a>
+			<a href="index.html" class="proButton">Back to menu</a>
+			<div class="canvasButtons">
+				<input id="drawSlider" type="range" min="1" max="100" value="50">
+				<button  onclick="squareTool()">Square</button>
+				<button  onclick="circleTool()">Circle</button>
 			</div>
 		</div>
+	</div>
     <div id="gameBody" class="gameDiv">
     </div>
 </body>
