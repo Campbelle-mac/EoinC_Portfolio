@@ -2,6 +2,7 @@ console.log("JavaScript Working");
 
 let num = 0;
 let mLeft = 0;
+let deleteMe = "deleteMe";
 
 const mainBar = document.getElementById("mainBarID");
 const countElement = document.getElementById("counter");
