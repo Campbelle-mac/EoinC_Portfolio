@@ -24,20 +24,21 @@
 
 .header {
 	display: flex;
-	width: 1250px;
-	height: 120px;
+	width: 80vw;
+	height: 17vh;
 	margin: auto;
 	background-color: lightgrey;
 }
 
 .headerElements {
-	margin-top: -20px;
-	margin-left: 5px;
+	margin-top: -2vh;
+	margin-left: 1vw;
 }
 
 .canvasButtons {
 	display: inline-block;
-	margin-left: 750px;
+	margin-top: -25vh;
+	margin-left: 60vw;
 }
 
 .mainDivElements {
@@ -64,8 +65,9 @@
 
 .gameDiv {
 	background-color: White;
+	position: relative;
 	display: block;
-	width: 1250px;
-	height: 815px;
+	width: 80vw;
+	height: 75vh;
 	margin: auto;
 }

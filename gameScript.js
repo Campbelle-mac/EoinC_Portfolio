@@ -20,15 +20,19 @@ function circleTool() {
 	drawType = "circle";
 }
 
-function drawBox() {
-	let X = event.offsetX;
-	let Y = event.offsetY;
+function drawBox(event) {
+	const rect = page.getBoundingClientRect();
+	let X = event.clientX - rect.left;
+	let Y = event.clientY - rect.top;
+	
+	//let X = event.offsetX;
+	//let Y = event.offsetY;
 	const box = document.createElement("div");
 	box.className = "box";
 	box.style.pointerEvents = "none";
 	box.style.position = "absolute";
-	box.style.top = Y + 125 - (drawSize / 2) + "px";
-	box.style.left = X + 100 - (drawSize / 2) + "px";
+	box.style.top = Y + "px";
+	box.style.left = X + "px";
 	box.style.width = drawSize + "px";
 	box.style.height = drawSize + "px";
 	box.style.backgroundColor = "black";
@@ -37,18 +41,19 @@ function drawBox() {
 	} else if (drawType == "square") {
 		box.style.borderRadius = "0%";
 	}
+	box.style.transform = "translate(-50%, -50%)";
 	page.append(box);
 }
 
 function eventMouseD(event) {
 	isDrawing = true;
-	drawBox();
+	drawBox(event);
 }
 
 function eventHandle(event) {
 	cords.innerHTML = "X: " + event.offsetX + " Y: " + event.offsetY;
 	if (isDrawing == true) {
-		drawBox()
+		drawBox(event)
 	}
 }
 
