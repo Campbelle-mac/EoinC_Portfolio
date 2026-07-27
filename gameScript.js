@@ -7,6 +7,7 @@ const slider = document.getElementById("drawSlider");
 let isDrawing = false;
 let drawType = "square";
 let drawSize = 50;
+let clear = false;
 
 slider.oninput = function() {
 	drawSize = this.value;
@@ -18,6 +19,15 @@ function squareTool() {
 
 function circleTool() {
 	drawType = "circle";
+}
+
+function clearScreen() {
+	clear = true;
+	if (clear == true) {
+		const boxes = document.querySelectorAll('.box');
+		boxes.forEach(box => {box.style.backgroundColor = "white";})
+		clear = false;
+	}
 }
 
 function drawBox(event) {
@@ -40,9 +50,11 @@ function drawBox(event) {
 		box.style.borderRadius = "100%";
 	} else if (drawType == "square") {
 		box.style.borderRadius = "0%";
-	}
+	} 
+	
 	box.style.transform = "translate(-50%, -50%)";
 	page.append(box);
+	
 }
 
 function eventMouseD(event) {
