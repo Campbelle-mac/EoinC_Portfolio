@@ -1,4 +1,4 @@
-.mainBody {
+.Body {
 	background-color: grey;
 }
 
@@ -11,21 +11,19 @@
 	transition: height 0.3s ease;
 }
 
-.mainDiv {
-<<<<<<< Updated upstream
-  background-color: White;
-=======
-	display: flex;
-	width: 1250px;
-	height: 815px;
-	margin: auto;
+.pageDiv {
 	background-color: White;
+	position: relative;
+	display: block;
+	width: 80vw;
+	height: 75vh;
+	margin: auto;
 }
 
 .header {
 	display: flex;
 	width: 80vw;
-	height: 17vh;
+	height: 150px;
 	margin: auto;
 	background-color: lightgrey;
 }
@@ -35,6 +33,7 @@
 	margin-left: 1vw;
 }
 
+
 .canvasButtons {
 	display: inline-block;
 	margin-top: -25vh;
@@ -43,11 +42,22 @@
 
 .mainDivElements {
 	display: block;
->>>>>>> Stashed changes
 }
 
 .mainHeading {
   font-size: 30px;
+}
+
+.gallery {
+	display: inline-block;
+	margin-top: 50px;
+}
+
+.projectsGallery {
+	display: inline;
+	margin: 20px;
+	padding: 5px 25px;
+	background-color: grey;
 }
 
 .counterClass {
@@ -63,7 +73,7 @@
 	background-color: blue;
 }
 
-.gameDiv {
+.canvasDiv {
 	background-color: White;
 	position: relative;
 	display: block;
