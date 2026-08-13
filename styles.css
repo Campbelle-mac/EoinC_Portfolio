@@ -28,16 +28,51 @@
 	background-color: lightgrey;
 }
 
+.testHeader {
+	display: grid;
+	justify-content: start;
+	width: 80vw;
+	height: 150px;
+	margin: auto;
+	background-color: lightgrey;
+}
+
+.title {
+	display: flex;
+	margin-left: 10px;
+}
+
+.subElements {
+	display: inline;
+	margin-left: 10px;
+	margin-top: -10px;
+	gap: 10px;
+}
+
 .headerElements {
-	margin-top: -2vh;
+	margin-top: -2px;
 	margin-left: 1vw;
 }
 
 
 .canvasButtons {
-	display: inline-block;
-	margin-top: -25vh;
-	margin-left: 55vw;
+	display: flex;
+	justify-content: end;
+	position: relative;
+	width: 25vw;
+	height: 30px;
+	margin-top: -25px;
+	margin-left: 50vw;
+	gap: 10px;
+}
+
+@media screen and (max-width: 640px) {
+	.canvasButton {
+		font-size: 8px;
+		height: 30px;
+		width: 80px;
+		gap: 0px;
+	}
 }
 
 .mainDivElements {

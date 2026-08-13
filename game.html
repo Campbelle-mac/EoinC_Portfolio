@@ -8,21 +8,28 @@
     <title>EoinC Portfolio</title>
 </head>
 <body class="Body">
-	<div id="gameHeader" class="header">
-		<div id="gameHeaderElements" class="headerElements">
-			<h1>Canvas</h1>
-			<p id="cords">X: 0 Y: 0</p>
-			<h2 class="proSubheading"></h2>
-			<a href="projects.html" class="mainButton">View Portfolio</a>
-			<a href="index.html" class="proButton">Back to menu</a>
-			<div class="canvasButtons">
-				<input id="drawSlider" type="range" min="1" max="100" value="50">
-				<button  onclick="squareTool()">Square</button>
-				<button  onclick="circleTool()">Circle</button>
-				<button  onclick="clearScreen()">Clear</button>
+	<header>
+		<div id="gameHeader" class="testHeader">
+			<div class="title">
+				<h1>Canvas</h1>
 			</div>
+			
+			<div class="subElements">
+				<p id="cords">X: 0 Y: 0</p>
+				<a href="projects.html" class="mainButton">View Portfolio</a>
+				<a href="index.html" class="proButton">Back to menu</a>
+			</div>
+			<div class="canvasButtons">
+				<input class="canvasButton" id="drawSlider" type="range" min="1" max="100" value="50">
+				<button class="canvasButton" onclick="squareTool()"> Square</button>
+				<button class="canvasButton" onclick="circleTool()">Circle</button>
+				<button class="canvasButton" onclick="clearScreen()">Clear</button>
+			</div>	
 		</div>
-	</div>
+	</header>
+	
+			
+			
 <div id="gameBody" class="canvasDiv">
 </div>
 </body>
