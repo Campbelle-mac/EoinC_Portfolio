@@ -21,18 +21,10 @@
 }
 
 .header {
-	display: flex;
-	width: 80vw;
-	height: 150px;
-	margin: auto;
-	background-color: lightgrey;
-}
-
-.testHeader {
 	display: grid;
 	justify-content: start;
 	width: 80vw;
-	height: 150px;
+	height: 135px;
 	margin: auto;
 	background-color: lightgrey;
 }
@@ -40,6 +32,32 @@
 .title {
 	display: flex;
 	margin-left: 10px;
+	margin-top: -15px;
+  	font-weight: 400;
+ 	font-style: normal;
+}
+
+.headerTestButtons {
+	display: flex;
+	justify-content: flex-end;
+	width: 80vw;
+	gap: 15px;
+}
+
+.headerButtons {
+	color: black;
+	font-size: 20px;
+	text-decoration: none;
+	background-color: white;
+	transform: translateX(-25px);
+	height: 25px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.headerButtons:hover {
+	background-color: #DEDEDE;
+	border-color: white;
 }
 
 .subElements {
@@ -66,12 +84,21 @@
 	gap: 10px;
 }
 
+@media screen and (max-width: 700px) {
+	.canvasButton {
+		font-size: 9px;
+		height: 30px;
+		width: 100px;
+		gap: -8px;
+	}
+}
+
 @media screen and (max-width: 640px) {
 	.canvasButton {
 		font-size: 8px;
 		height: 30px;
 		width: 80px;
-		gap: 0px;
+		gap: -10px;
 	}
 }
 
